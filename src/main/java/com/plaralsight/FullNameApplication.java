@@ -27,7 +27,7 @@ public class FullNameApplication {
         suffix =  Character.toUpperCase(suffix.charAt(0)) +
                 suffix.substring(1).toLowerCase();
 
-        System.out.printf("Full name: %s,  %s %s %s", suffix,firstName,middleName,lastName);
+        System.out.printf("Full name: %s,  %s %s. %s", suffix,firstName,middleName,lastName);
 
 
 
