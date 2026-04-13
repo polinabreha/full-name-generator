@@ -27,7 +27,20 @@ public class FullNameApplication {
         suffix =  Character.toUpperCase(suffix.charAt(0)) +
                 suffix.substring(1).toLowerCase();
 
-        System.out.printf("Full name: %s,  %s %s. %s", suffix,firstName,middleName,lastName);
+        if(suffix.equalsIgnoreCase(" ") && middleName.equalsIgnoreCase(" ")){
+            String fullName = firstName + " " + lastName ;
+            System.out.println(fullName);
+        } else if (suffix.equalsIgnoreCase(" ")) {
+            String fullName = firstName + " " + middleName + " " +lastName;
+            System.out.println(fullName);
+        }else if(middleName.equalsIgnoreCase(" ")){
+            String fullName = firstName + " " + lastName + " " + ","+suffix;
+            System.out.println(fullName);
+        }else {
+            System.out.printf("Full name: %s,  %s %s. %s", suffix,firstName,middleName,lastName);
+        }
+
+
 
 
 
